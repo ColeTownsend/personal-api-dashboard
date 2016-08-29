@@ -1,0 +1,8 @@
+.expectedRunItem img {
+  width: 35px;
+  height: auto;
+  flex: none;
+  display: block;
+  margin-right: -5px;
+  margin-top: -5px;
+}

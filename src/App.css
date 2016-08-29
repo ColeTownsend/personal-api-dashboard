@@ -1,0 +1,68 @@
+.App {
+  background-color: #121031;
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.goal {
+  width: 50%;
+}
+
+.schedule {
+  width: 50%;
+}
+
+.goals h1 {
+  font-family: "Calibre";
+  font-weight: 300;
+  font-size: 32px;
+  color: #C3C1E7;
+  letter-spacing: 0px;
+  line-height: 42px;
+}
+
+.dash-item {
+  max-width: 380px;
+  background: #14113E;
+  border: 1px solid #292478;
+  border-radius: 2px;
+  padding: 10px;
+  text-align: left;
+  justify-content: space-between;
+  display: flex;
+  align-items: flex-start;
+}
+
+.dash-item:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.dash-item h3 {
+  font-family: Calibre;
+  font-weight: 400;
+  font-size: 18px;
+  color: #D1DBEC;
+  letter-spacing: 0.3px;
+  line-height: 30px;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1.2;
+  margin-bottom: 0.1em;
+}
+
+.dash-item p {
+  font-family: Input;
+  font-weight: 400;
+  font-size: 12px;
+  color: #ACB7CC;
+  letter-spacing: 0.14px;
+  line-height: 21px;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1.2;
+  margin-bottom: 0.25em;
+}
