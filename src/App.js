@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import './App.css'
+import { Provider } from 'react-redux'
 
 import Events from './components/Events/Events'
 import ExpectedRun from './components/ExpectedRun/ExpectedRun'
-import RecentSong from './components/RecentSong/RecentSong'
+import RecentSong from './containers/recent-song'
 import CurrentAge from './components/CurrentAge/CurrentAge'
 
+import store from './store';
 
 class App extends Component {
   render() {
@@ -29,4 +31,14 @@ class App extends Component {
   }
 }
 
-export default App
+class OMG extends Component {
+  render() {
+    return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
+  }
+}
+
+export default OMG;

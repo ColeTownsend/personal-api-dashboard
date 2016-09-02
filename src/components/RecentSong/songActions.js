@@ -16,7 +16,15 @@ const formattedRequestUrl = (queryObject) => {
 
 export default {
   getRecentSongs() {
-    return fetch(formattedRequestUrl(latestTrackQueries))
-    .then((response) => response.json())
-  }
+    return function(dispatch) {
+      const url = formattedRequestUrl(latestTrackQueries);
+
+      return fetch(url)
+        .then(response => response.json())
+        .then(json => dispatch({
+          type: 'ADD_ALL_SONGS',
+          songs: json,
+        }));
+    }
+  },
 }
