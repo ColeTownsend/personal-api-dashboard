@@ -19,28 +19,20 @@ export default class CurrentAge extends Component {
   componentWillUnmount() {
   }
 
-  setAgeState() {
-    this.setState({age: getCurrentAge(myDOB)})
-  }
-
-  incrementAge() {
-
+  setAgeState(date) {
+    this.setState({age: getCurrentAge(date)})
   }
 
   componentDidMount() {
-    this.setAgeState()
-    const decimalsPerSecond = Math.pow(10, 9) / (365 * 24 * 60 * 60)
-
+    this.setAgeState(myDOB)
     setInterval(() => {
-      let newAge = parseInt(parseFloat( this.state.age * yearInSeconds + decimalsPerSecond * 0.07))
-      this.setState({age: newAge})
-
-    }, 100)
+      this.setAgeState(myDOB)
+    }, 300)
   }
 
   render() {
     return (
-      <h1>{this.state.age}</h1>
+      <h1>You are <span className="age">{this.state.age}</span> years old.</h1>
     )
   }
 }
